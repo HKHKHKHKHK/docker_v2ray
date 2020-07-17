@@ -1,0 +1,22 @@
+version: "2"
+services:
+  caddy:
+    container_name: caddy
+    image: abiosoft/caddy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/Caddyfile
+      - ./caddy/data:/root/.caddy
+      - ./caddy/html:/var/www/html
+    environment:
+      ACME_AGREE: "true"
+
+  v2ray:
+    container_name: v2ray
+    image: v2ray/official
+    restart: always
+    volumes:
+      - ./v2ray:/etc/v2ray

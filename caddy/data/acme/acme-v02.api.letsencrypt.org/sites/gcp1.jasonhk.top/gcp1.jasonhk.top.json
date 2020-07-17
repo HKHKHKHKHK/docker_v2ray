@@ -1,0 +1,5 @@
+{
+	"domain": "gcp1.jasonhk.top",
+	"certUrl": "https://acme-v02.api.letsencrypt.org/acme/cert/0419d666ad89b3548f028777509b82a9927e",
+	"certStableUrl": "https://acme-v02.api.letsencrypt.org/acme/cert/0419d666ad89b3548f028777509b82a9927e"
+}

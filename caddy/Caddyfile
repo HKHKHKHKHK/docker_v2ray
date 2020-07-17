@@ -1,0 +1,14 @@
+http://gcp1.jasonhk.top {
+  redir https://gcp1.jasonhk.top {url}
+}
+
+https://gcp1.jasonhk.top {
+  root /var/www/html
+  gzip
+  index index.html
+  tls a@a.com
+  proxy /v2rays/ v2ray:8080 {
+    websocket
+    header_upstream -Origin
+  }
+}
